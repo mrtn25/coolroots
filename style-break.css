@@ -1,0 +1,18 @@
+/* Full-bleed image break between How It Works and For Companies */
+.section-break-img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  overflow: hidden;
+  /* No border-radius — flush top and bottom so it bridges both sections cleanly */
+}
+
+.section-break-img .break-img {
+  width: 100%;
+  height: clamp(260px, 40vw, 520px);
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+  margin: 0;
+}
