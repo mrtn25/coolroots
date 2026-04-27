@@ -24,12 +24,12 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0 24px;
+  padding: 12px 32px;  /* more breathing room top & bottom */
 }
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  height: 64px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,8 +42,8 @@ nav {
 }
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 2.5px;
   background: var(--lime);
   border-radius: 2px;
 }
@@ -62,7 +62,7 @@ nav {
   text-decoration: none;
   font-size: 0.95rem;
   border: 1.5px solid var(--lime);
-  padding: 6px 16px;
+  padding: 8px 20px;
   border-radius: 100px;
   transition: background 0.2s, color 0.2s;
 }
@@ -74,7 +74,7 @@ nav {
 /* HERO */
 .hero {
   background: var(--green-dark);
-  padding: 24px;
+  padding: 28px 28px 36px;
 }
 .hero-image-wrapper {
   position: relative;
@@ -84,6 +84,7 @@ nav {
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 16/7;
+  background: #0a3328;
 }
 .hero-img {
   width: 100%;
@@ -92,17 +93,13 @@ nav {
   display: block;
   position: absolute;
   top: 0; left: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.9s ease;
 }
 .hero-img-after {
   opacity: 0;
 }
 .hero-image-wrapper.transformed .hero-img-after {
   opacity: 1;
-}
-.hero-image-wrapper.transformed .tap-btn {
-  opacity: 0;
-  pointer-events: none;
 }
 .tap-btn {
   position: absolute;
@@ -113,16 +110,21 @@ nav {
   color: var(--green-dark);
   font-weight: 700;
   font-size: 1.1rem;
+  font-family: var(--font);
   border: none;
   border-radius: 100px;
-  padding: 16px 32px;
+  padding: 18px 36px;
   cursor: pointer;
-  transition: opacity 0.4s, transform 0.2s;
+  transition: opacity 0.5s ease, transform 0.2s;
   white-space: nowrap;
   z-index: 10;
+  pointer-events: none;
 }
-.tap-btn:hover {
-  transform: translate(-50%, -50%) scale(1.05);
+.hero-image-wrapper:hover .tap-btn {
+  transform: translate(-50%, -50%) scale(1.04);
+}
+.hero-image-wrapper.transformed .tap-btn {
+  opacity: 0;
 }
 
 /* VALUE PROP */

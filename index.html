@@ -28,10 +28,22 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-image-wrapper" id="heroWrapper">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ludgate_Circus.jpg/1280px-Ludgate_Circus.jpg" alt="Grey city street" class="hero-img" id="heroImgBefore" />
-      <img src="https://www.watg.com/wp-content/uploads/2019/06/WATG_GreenBlock_Aerial_HighRes-1920x1080.jpg" alt="Greened city street" class="hero-img hero-img-after" id="heroImgAfter" />
-      <button class="tap-btn" id="tapBtn" onclick="transformCity()">Tap to transform &#x2197;</button>
+    <div class="hero-image-wrapper" id="heroWrapper" onclick="transformCity()">
+      <!-- BEFORE: grey city street (free Unsplash, no hotlink block) -->
+      <img
+        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&auto=format&fit=crop&q=80"
+        alt="Grey city street"
+        class="hero-img"
+        id="heroImgBefore"
+      />
+      <!-- AFTER: green lush city park (free Unsplash) -->
+      <img
+        src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=1400&auto=format&fit=crop&q=80"
+        alt="Greened urban park"
+        class="hero-img hero-img-after"
+        id="heroImgAfter"
+      />
+      <button class="tap-btn" id="tapBtn">Tap to transform &#x2197;</button>
     </div>
   </section>
 
@@ -75,7 +87,7 @@
       <div class="benefit">
         <div class="benefit-icon">&#127807;</div>
         <h4>Real ESG Impact</h4>
-        <p>Measurable m&sup2; greened, trees planted, and surface temperature data — CSRD-reportable from day one.</p>
+        <p>Measurable m&sup2; greened, trees planted, and surface temperature data &mdash; CSRD-reportable from day one.</p>
       </div>
       <div class="benefit">
         <div class="benefit-icon">&#128248;</div>
@@ -85,7 +97,7 @@
       <div class="benefit">
         <div class="benefit-icon">&#129309;</div>
         <h4>Team Bonding</h4>
-        <p>A half-day outdoor event that builds genuine pride and connection — not another escape room.</p>
+        <p>A half-day outdoor event that builds genuine pride and connection &mdash; not another escape room.</p>
       </div>
       <div class="benefit">
         <div class="benefit-icon">&#127760;</div>
@@ -98,7 +110,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Ready to green your city?</h2>
-    <p>Get in touch and we'll design the perfect action day for your team.</p>
+    <p>Get in touch and we&apos;ll design the perfect action day for your team.</p>
     <a class="cta-btn" href="mailto:hello@coolroots.org">hello@coolroots.org &#x2197;</a>
   </section>
 
