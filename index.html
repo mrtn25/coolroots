@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoolRoots</title>
+  <title>CoolRoots &mdash; Green the City</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
@@ -12,9 +12,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
       <div class="logo">
         <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
@@ -22,24 +20,24 @@
         </svg>
         <span>CoolRoots</span>
       </div>
-      <a class="nav-cta" href="#contact">Get in touch &#x2197;</a>
+      <a class="nav-cta" href="#pilot">Join the Pilot &#x2197;</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-image-wrapper" id="heroWrapper" onclick="transformCity()">
-      <!-- BEFORE: grey city street (free Unsplash, no hotlink block) -->
       <img
         src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&auto=format&fit=crop&q=80"
         alt="Grey city street"
         class="hero-img"
         id="heroImgBefore"
       />
-      <!-- AFTER: green lush city park (free Unsplash) -->
+      <!-- GIF loads on click via JS -->
       <img
-        src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=1400&auto=format&fit=crop&q=80"
-        alt="Greened urban park"
+        src=""
+        data-src="https://www.thisiscolossal.com/wp-content/uploads/2021/04/1181579_81_108552_ENinTa7GV.gif"
+        alt="City transforming green"
         class="hero-img hero-img-after"
         id="heroImgAfter"
       />
@@ -52,8 +50,48 @@
     <div class="value-bg">
       <p class="vp-label">Value Proposition:</p>
       <h1 class="vp-headline">We organize corporate team-building events to transform urban green spaces</h1>
-      <p class="vp-sub">giving companies real ESG impact, great employer branding, and employees an outdoor experience they'll actually remember.</p>
+      <p class="vp-sub">giving companies real ESG impact, great employer branding, and employees an outdoor experience they&apos;ll actually remember.</p>
       <div class="vp-arrow">&#8595;</div>
+    </div>
+  </section>
+
+  <!-- THE CHALLENGE -->
+  <section class="challenge">
+    <div class="challenge-inner">
+      <div class="challenge-text">
+        <h2>The challenge:<br/>Our cities are heating up</h2>
+        <p class="challenge-sub">The Urban Environmental Crisis</p>
+        <ul>
+          <li>Destroyed habitats and biodiversity loss from urbanization</li>
+          <li>Increasing air pollution and smog affecting public health</li>
+          <li>Cities produce <strong>70% of global greenhouse emissions</strong></li>
+          <li>Urban heat island effects intensify climate impacts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TACTICAL URBANISM -->
+  <section class="tactical">
+    <div class="tactical-inner">
+      <div class="tactical-left">
+        <div class="tactical-logo">
+          <svg width="32" height="25" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
+            <ellipse cx="25" cy="14" rx="11" ry="14" fill="#C8F135" fill-opacity="0.6"/>
+          </svg>
+          <span>CoolRoots</span>
+        </div>
+        <h2 class="tactical-title">Tactical <span class="lime-text">&#x2197;</span><br/>Urbanism</h2>
+      </div>
+      <div class="tactical-right">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80"
+          alt="Tactical urbanism parklet with community"
+          class="tactical-img"
+        />
+        <p class="tactical-desc">Tactical Urbanism is a low-cost, short-term, community-led approach to testing and demonstrating urban improvements &mdash; like pop-up parks or green spaces &mdash; before they become permanent city infrastructure.</p>
+      </div>
     </div>
   </section>
 
@@ -64,16 +102,19 @@
     <h2 class="how-title">How it works</h2>
     <div class="steps">
       <div class="step-card">
+        <div class="step-num">01</div>
         <h3>Source the Space</h3>
         <p>We partner with districts, schools &amp; landowners to identify grey zones and secure permits for greening.</p>
       </div>
       <div class="step-arrow">&#x2192;</div>
       <div class="step-card">
+        <div class="step-num">02</div>
         <h3>The Action Day</h3>
-        <p>Corporate teams spend 4 hours assembling parklets, planting greenery, painting heat-reflective surfaces, guided by our urbanist expert and our PR team.</p>
+        <p>Corporate teams spend 4 hours assembling parklets, planting greenery, painting heat-reflective surfaces, guided by our urbanist expert and PR team.</p>
       </div>
       <div class="step-arrow">&#x2192;</div>
       <div class="step-card">
+        <div class="step-num">03</div>
         <h3>The Green Legacy</h3>
         <p>A finished micro-park is handed to the community. The company gets a plaque, ESG data &amp; employer branding content.</p>
       </div>
@@ -102,8 +143,55 @@
       <div class="benefit">
         <div class="benefit-icon">&#127760;</div>
         <h4>Community Legacy</h4>
-        <p>A green micro-park handed to the neighborhood, maintained by local residents and partners.</p>
+        <p>New green micro-spaces &amp; cooler neighborhoods. Direct contribution to urban climate resilience.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- TARGET AUDIENCE -->
+  <section class="audience">
+    <h2>Who we work with</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h3>Target Audience</h3>
+        <ul>
+          <li>Large corporates with HR/CSR &amp; team-building budgets</li>
+          <li>Companies that need authentic, measurable sustainability action</li>
+          <li>Pilot market: <strong>Lisbon</strong> &mdash; EDP, Galp, Sonae, Vodafone, Santander</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h3>For Companies</h3>
+        <ul>
+          <li>Hands-on outdoor team-building with real impact</li>
+          <li>Tangible ESG data for reporting &amp; employer branding</li>
+          <li>Visible city legacy &mdash; &ldquo;Built by [Company]&rdquo; plaque</li>
+          <li>Long-term engagement via employee Plant Sponsorships</li>
+        </ul>
+        <h3 style="margin-top:20px">For the City</h3>
+        <ul>
+          <li>New green micro-spaces &amp; cooler neighborhoods</li>
+          <li>Direct contribution to urban climate resilience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILOT CTA -->
+  <section class="pilot" id="pilot">
+    <div class="pilot-inner">
+      <div class="pilot-badge">&#127807; Lisbon Pilot 2026</div>
+      <h2>Be one of our first pilot partners in Lisbon</h2>
+      <p>We are looking for <strong>3 companies</strong> in Lisbon to co-create the first CoolRoots green interventions this year. You get a fully organized action day, a real ESG deliverable, and the chance to shape what corporate urban impact looks like in your city.</p>
+      <div class="pilot-targets">
+        <div class="pilot-tag">EDP</div>
+        <div class="pilot-tag">Galp</div>
+        <div class="pilot-tag">Sonae</div>
+        <div class="pilot-tag">Vodafone</div>
+        <div class="pilot-tag">Santander</div>
+        <div class="pilot-tag">Your company &#x2197;</div>
+      </div>
+      <a class="cta-btn" href="mailto:hello@coolroots.org?subject=Lisbon Pilot Interest">Apply for the pilot &#x2197;</a>
     </div>
   </section>
 
@@ -111,7 +199,7 @@
   <section class="contact" id="contact">
     <h2>Ready to green your city?</h2>
     <p>Get in touch and we&apos;ll design the perfect action day for your team.</p>
-    <a class="cta-btn" href="mailto:hello@coolroots.org">hello@coolroots.org &#x2197;</a>
+    <a class="cta-btn cta-outline" href="mailto:hello@coolroots.org">hello@coolroots.org &#x2197;</a>
   </section>
 
   <!-- FOOTER -->
