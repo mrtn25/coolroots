@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoolRoots &mdash; Green the City</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- Agrandir via Pangram Pantherа (closest free CDN) is not available; use local @font-face fallback with Clash Display as substitute -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -27,12 +29,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-image-wrapper" id="heroWrapper" onclick="transformCity()">
-      <!-- Thumbnail: WATG London street mid-greening -->
+      <!-- London city street mid-greening thumbnail -->
       <img
-        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&auto=format&fit=crop&q=80"
+        src="https://www.watg.com/wp-content/uploads/2019/06/WATG_GreenBlock_Aerial_HighRes-1920x1080.jpg"
         alt="City street before greening"
         class="hero-img"
         id="heroImgBefore"
+        onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&auto=format&fit=crop&q=80'"
       />
       <!-- GIF: loads only on click -->
       <img
@@ -59,15 +62,24 @@
   <!-- THE CHALLENGE -->
   <section class="challenge">
     <div class="challenge-inner">
-      <div class="challenge-text">
-        <h2>The challenge:<br/>Our cities are heating up</h2>
-        <p class="challenge-sub">The Urban Environmental Crisis</p>
-        <ul>
-          <li>Destroyed habitats and biodiversity loss from urbanization</li>
-          <li>Increasing air pollution and smog affecting public health</li>
-          <li>Cities produce <strong>70% of global greenhouse emissions</strong></li>
-          <li>Urban heat island effects intensify climate impacts</li>
-        </ul>
+      <div class="challenge-content">
+        <p class="challenge-label">The Problem</p>
+        <h2>Our cities are heating up &mdash; and your company can be part of the solution</h2>
+        <div class="challenge-stats">
+          <div class="challenge-stat">
+            <span class="stat-num">70%</span>
+            <span class="stat-desc">of global greenhouse emissions come from cities</span>
+          </div>
+          <div class="challenge-stat">
+            <span class="stat-num">+4&deg;C</span>
+            <span class="stat-desc">warmer in urban heat islands vs. surrounding areas</span>
+          </div>
+          <div class="challenge-stat">
+            <span class="stat-num">1 in 3</span>
+            <span class="stat-desc">employees say sustainability matters in their employer choice</span>
+          </div>
+        </div>
+        <p class="challenge-body">Biodiversity loss, rising air pollution, and the destruction of urban habitats are accelerating. Companies with genuine ESG ambitions need more than carbon offsets &mdash; they need visible, measurable action in the communities where they operate.</p>
       </div>
     </div>
   </section>
@@ -88,9 +100,10 @@
       <div class="tactical-right">
         <img
           src="https://parametric-architecture.com/wp-content/uploads/2023/01/tactical-urbanism-Agora-Maximus.jpg"
-          alt="Tactical urbanism parklet with community"
+          alt="Community parklet tactical urbanism installation"
           class="tactical-img"
-          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80'"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&auto=format&fit=crop&q=80'"
         />
         <p class="tactical-desc">Tactical Urbanism is a low-cost, short-term, community-led approach to testing and demonstrating urban improvements &mdash; like pop-up parks or green spaces &mdash; before they become permanent city infrastructure.</p>
       </div>
@@ -155,17 +168,35 @@
   <section class="pilot" id="pilot">
     <div class="pilot-inner">
       <div class="pilot-badge">&#127807; Lisbon Pilot 2026</div>
-      <h2>Be one of our first pilot partners in Lisbon</h2>
-      <p>We are looking for <strong>3 companies</strong> in Lisbon to co-create the first CoolRoots green interventions this year. You get a fully organized action day, a real ESG deliverable, and the chance to shape what corporate urban impact looks like in your city.</p>
+      <h2>We are looking for one company to pilot with us in Lisbon</h2>
+      <p>We&rsquo;re running our first CoolRoots intervention this year &mdash; and we want one corporate partner to shape what it looks like.</p>
+      <div class="pilot-scope">
+        <div class="pilot-scope-item">
+          <span class="scope-num">1</span>
+          <span class="scope-label">Corporate partner</span>
+        </div>
+        <div class="pilot-scope-item">
+          <span class="scope-num">1</span>
+          <span class="scope-label">Intervention site in Lisbon</span>
+        </div>
+        <div class="pilot-scope-item">
+          <span class="scope-num">10&ndash;25</span>
+          <span class="scope-label">Employees participating</span>
+        </div>
+        <div class="pilot-scope-item">
+          <span class="scope-num">1</span>
+          <span class="scope-label">Completed micro-greening installation</span>
+        </div>
+      </div>
       <p class="pilot-who">This is for HR, CSR, and People &amp; Culture leaders at companies with 100+ employees who are ready to turn their sustainability commitment into something visible, measurable, and memorable.</p>
-      <a class="cta-btn" href="mailto:hello@coolroots.org?subject=Lisbon%20Pilot%20Interest">Apply for the pilot &#x2197;</a>
+      <a class="cta-btn" href="mailto:hello@coolroots.org?subject=Lisbon%20Pilot%20Interest">Get in touch &#x2197;</a>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Ready to green your city?</h2>
-    <p>Get in touch and we&apos;ll design the perfect action day for your team.</p>
+    <p>Reach out and we&apos;ll design the perfect action day for your team.</p>
     <a class="cta-btn cta-outline" href="mailto:hello@coolroots.org">hello@coolroots.org &#x2197;</a>
   </section>
 
