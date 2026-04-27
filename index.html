@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoolRoots</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="logo">
+        <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
+          <ellipse cx="25" cy="14" rx="11" ry="14" fill="#C8F135" fill-opacity="0.6"/>
+        </svg>
+        <span>CoolRoots</span>
+      </div>
+      <a class="nav-cta" href="#contact">Get in touch &#x2197;</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image-wrapper" id="heroWrapper">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ludgate_Circus.jpg/1280px-Ludgate_Circus.jpg" alt="Grey city street" class="hero-img" id="heroImgBefore" />
+      <img src="https://www.watg.com/wp-content/uploads/2019/06/WATG_GreenBlock_Aerial_HighRes-1920x1080.jpg" alt="Greened city street" class="hero-img hero-img-after" id="heroImgAfter" />
+      <button class="tap-btn" id="tapBtn" onclick="transformCity()">Tap to transform &#x2197;</button>
+    </div>
+  </section>
+
+  <!-- VALUE PROP -->
+  <section class="value-prop">
+    <div class="value-bg">
+      <p class="vp-label">Value Proposition:</p>
+      <h1 class="vp-headline">We organize corporate team-building events to transform urban green spaces</h1>
+      <p class="vp-sub">giving companies real ESG impact, great employer branding, and employees an outdoor experience they'll actually remember.</p>
+      <div class="vp-arrow">&#8595;</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="lime-blob lime-left"></div>
+    <div class="lime-blob lime-right"></div>
+    <h2 class="how-title">How it works</h2>
+    <div class="steps">
+      <div class="step-card">
+        <h3>Source the Space</h3>
+        <p>We partner with districts, schools &amp; landowners to identify grey zones and secure permits for greening.</p>
+      </div>
+      <div class="step-arrow">&#x2192;</div>
+      <div class="step-card">
+        <h3>The Action Day</h3>
+        <p>Corporate teams spend 4 hours assembling parklets, planting greenery, painting heat-reflective surfaces, guided by our urbanist expert and our PR team.</p>
+      </div>
+      <div class="step-arrow">&#x2192;</div>
+      <div class="step-card">
+        <h3>The Green Legacy</h3>
+        <p>A finished micro-park is handed to the community. The company gets a plaque, ESG data &amp; employer branding content.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR COMPANIES -->
+  <section class="for-companies">
+    <h2>What your company gets</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">&#127807;</div>
+        <h4>Real ESG Impact</h4>
+        <p>Measurable m&sup2; greened, trees planted, and surface temperature data — CSRD-reportable from day one.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">&#128248;</div>
+        <h4>Employer Branding</h4>
+        <p>A physical plaque, before/after content, and a story your team will actually share on LinkedIn.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">&#129309;</div>
+        <h4>Team Bonding</h4>
+        <p>A half-day outdoor event that builds genuine pride and connection — not another escape room.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">&#127760;</div>
+        <h4>Community Legacy</h4>
+        <p>A green micro-park handed to the neighborhood, maintained by local residents and partners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Ready to green your city?</h2>
+    <p>Get in touch and we'll design the perfect action day for your team.</p>
+    <a class="cta-btn" href="mailto:hello@coolroots.org">hello@coolroots.org &#x2197;</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="logo">
+        <svg width="28" height="22" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
+          <ellipse cx="25" cy="14" rx="11" ry="14" fill="#C8F135" fill-opacity="0.6"/>
+        </svg>
+        <span>CoolRoots</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 CoolRoots. Making cities cooler, one team at a time.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
