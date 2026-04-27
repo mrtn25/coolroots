@@ -205,7 +205,13 @@ nav {
 .tactical-desc { font-size: 1.05rem; line-height: 1.7; color: var(--green-dark); font-weight: 500; }
 
 /* HOW IT WORKS */
-.how { background: var(--white); padding: 80px 24px; position: relative; overflow: hidden; }
+.how {
+  background: var(--white);
+  padding: 80px 24px 120px;   /* extra bottom padding = space for the overlapping image */
+  position: relative;
+  overflow: visible;          /* allow child to overflow downward */
+  z-index: 1;
+}
 .lime-blob { position: absolute; width: 200px; height: 200px; background: var(--lime); border-radius: 50%; top: -60px; opacity: 0.7; }
 .lime-left { left: -60px; } .lime-right { right: -60px; }
 .how-title { font-family: var(--font-display); text-align: center; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; color: var(--green-dark); margin-bottom: 56px; letter-spacing: -0.02em; }
@@ -216,27 +222,31 @@ nav {
 .step-card p { font-size: 0.95rem; line-height: 1.7; color: #444; }
 .step-arrow { font-size: 1.8rem; color: var(--lime); background: var(--green-dark); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 56px; }
 
-/* SECTION BREAK IMAGE — full-bleed between How It Works and For Companies */
+/* SECTION BREAK IMAGE — overlaps bottom of .how section */
 .section-break-img {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  position: relative;
+  z-index: 10;               /* sits above .how (z:1) and .for-companies (z:auto) */
+  margin-top: -80px;         /* pull upward to overlap the step-cards */
+  margin-bottom: -40px;      /* tuck slightly into the section below */
+  padding: 0 clamp(24px, 6vw, 100px); /* narrower than full-bleed → not edge-to-edge */
   line-height: 0;
-  display: block;
-  overflow: hidden;
-  /* flush — no gap above (white .how) or below (green .for-companies) */
 }
 .section-break-img .break-img {
   width: 100%;
-  height: clamp(280px, 38vw, 540px);
+  max-width: 1000px;         /* cap width — not stretched full screen */
+  height: clamp(240px, 30vw, 460px);
   object-fit: cover;
   object-position: center 55%;
   display: block;
-  margin: 0;
+  margin: 0 auto;            /* center horizontally */
+  border-radius: 24px;       /* rounded corners reinforce the "floating card" look */
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.18),
+    0 32px 80px rgba(0,0,0,0.22); /* deep shadow = lifted off the page */
 }
 
 /* FOR COMPANIES */
-.for-companies { background: var(--green-dark); padding: 80px 24px; text-align: center; }
+.for-companies { background: var(--green-dark); padding: 100px 24px 80px; text-align: center; position: relative; z-index: 2; }
 .for-companies h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 500; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; max-width: 800px; margin-left: auto; margin-right: auto; }
 .for-companies-sub { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 700px; margin: 0 auto 48px; line-height: 1.7; }
 .benefits { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
@@ -283,5 +293,10 @@ footer { background: var(--green-dark); padding: 32px 24px; }
   .logo { font-size: 1rem; }
   .logo svg { width: 28px; height: 22px; }
   .nav-cta { font-size: 0.8rem; padding: 8px 14px; }
-  .section-break-img .break-img { height: 220px; }
+  .section-break-img {
+    margin-top: -48px;
+    margin-bottom: -24px;
+    padding: 0 16px;
+  }
+  .section-break-img .break-img { height: 200px; border-radius: 14px; }
 }
