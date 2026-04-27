@@ -13,7 +13,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <div class="hamburger"><span></span><span></span><span></span></div>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
       <div class="logo">
         <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
@@ -27,7 +27,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-image-wrapper" id="heroWrapper" onclick="transformCity()">
+    <div class="hero-image-wrapper" id="heroWrapper">
       <img
         src="./hero-thumbnail.jpg"
         alt="City street before greening"
@@ -37,12 +37,13 @@
       />
       <img
         src=""
-        data-src="https://www.thisiscolossal.com/wp-content/uploads/2021/04/1181579_81_108552_ENinTa7GV.gif"
+        data-src=""
         alt="City transforming into green space"
         class="hero-img hero-img-after"
         id="heroImgAfter"
       />
-      <button class="tap-btn" id="tapBtn">Tap to transform &#x2197;</button>
+      <button class="tap-btn" id="tapBtn" onclick="transformCity()">Tap to transform &#x2197;</button>
+      <span class="hero-credit">Hero image: WATG Urban / tactical urbanism render</span>
     </div>
   </section>
 
@@ -95,13 +96,16 @@
         <h2 class="tactical-title">Tactical <span class="lime-text">&#x2197;</span><br/>Urbanism</h2>
       </div>
       <div class="tactical-right">
-        <img
-          src="./tactical-urbanism.jpg"
-          alt="Community parklet tactical urbanism installation"
-          class="tactical-img"
-          loading="lazy"
-          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80'"
-        />
+        <div class="tactical-img-wrap">
+          <img
+            src="./tactical-urbanism.jpg"
+            alt="Community parklet tactical urbanism installation"
+            class="tactical-img"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80'"
+          />
+          <span class="img-credit">Photo: Gehl Architects / urban parklet installation</span>
+        </div>
         <p class="tactical-desc">Tactical Urbanism is a low-cost, short-term, community-led approach to testing and demonstrating urban improvements &mdash; like pop-up parks or green spaces &mdash; before they become permanent city infrastructure.</p>
       </div>
     </div>
@@ -167,37 +171,20 @@
       <div class="pilot-badge">&#127807; Lisbon Pilot 2026</div>
       <h2>We are looking for one company to pilot with us in Lisbon</h2>
 
-      <!-- Pilot scope cards -->
-      <div class="pilot-scope">
-        <div class="scope-card">
-          <span class="scope-num">1</span>
-          <span class="scope-label">Corporate<br/>Client</span>
-        </div>
-        <div class="scope-card">
-          <span class="scope-num">1</span>
-          <span class="scope-label">Intervention<br/>Site</span>
-        </div>
-        <div class="scope-card">
-          <span class="scope-num">10&ndash;25</span>
-          <span class="scope-label">Employees<br/>Participating</span>
-        </div>
-        <div class="scope-card">
-          <span class="scope-num">1</span>
-          <span class="scope-label">Completed Micro-Greening<br/>Installation</span>
-        </div>
+      <!-- Gemini image -->
+      <div class="pilot-img-wrap">
+        <img
+          src="./Gemini_Generated_Image_pnqhwhpnqhwhpnqh.png"
+          alt="Corporate team greening the city"
+          class="pilot-img"
+          loading="lazy"
+        />
+        <span class="img-credit img-credit-dark">Image: Google Gemini AI generated</span>
       </div>
 
-      <!-- Gemini image between headline and description -->
-      <img
-        src="./Gemini_Generated_Image_pnqhwhpnqhwhpnqh.png"
-        alt="Corporate team greening the city"
-        class="pilot-img"
-        loading="lazy"
-      />
-
-      <p>We&rsquo;re running our first CoolRoots intervention this year &mdash; and we want one corporate partner to shape what it looks like. The pilot is intentionally small and focused &mdash; designed to deliver a real, measurable green installation in Lisbon while giving your team an unforgettable day of purpose-driven action.</p>
+      <p>We&rsquo;re running our first CoolRoots intervention this year &mdash; and we want one corporate partner to shape what it looks like. The pilot is intentionally small and focused: <strong>1 corporate client</strong>, <strong>1 intervention site</strong> in Lisbon, <strong>10&ndash;25 employees</strong> participating, and <strong>1 completed micro-greening installation</strong> handed to the neighborhood at the end of the day.</p>
       <p class="pilot-who">This is for HR, CSR, and People &amp; Culture leaders who are ready to turn their sustainability commitment into something visible, measurable, and memorable.</p>
-      <a class="cta-btn" href="mailto:hello@coolroots.org?subject=Lisbon%20Pilot%20Interest">Get in touch &#x2197;</a>
+      <a class="cta-btn" href="mailto:s-mauer@ucp.pt?subject=CoolRoots%20Lisbon%20Pilot%20Interest">Get in touch &#x2197;</a>
     </div>
   </section>
 
