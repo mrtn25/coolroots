@@ -7,13 +7,66 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Mobile nav drawer ── */
+    .nav-drawer {
+      position: fixed;
+      top: 0; right: 0;
+      width: 260px;
+      height: 100vh;
+      background: #0e5c4a;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+      display: flex;
+      flex-direction: column;
+      padding: 72px 32px 40px;
+      gap: 8px;
+      box-shadow: -4px 0 32px rgba(0,0,0,0.25);
+    }
+    .nav-drawer.open { transform: translateX(0); }
+    .nav-drawer a {
+      color: #e5ffe0;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.15s;
+    }
+    .nav-drawer a:hover { color: #c8f135; }
+    .nav-drawer a.drawer-cta {
+      margin-top: 20px;
+      background: #c8f135;
+      color: #0e3d2a;
+      border-radius: 8px;
+      padding: 13px 20px;
+      text-align: center;
+      border-bottom: none;
+    }
+    .nav-drawer a.drawer-cta:hover { background: #b8e120; color: #0e3d2a; }
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 998;
+    }
+    .nav-overlay.open { display: block; }
+    .hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.is-open span:nth-child(2) { opacity: 0; }
+    .hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hamburger span { transition: transform 0.22s, opacity 0.22s; }
+  </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
       <div class="logo">
         <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="11" cy="14" rx="11" ry="14" fill="#C8F135"/>
@@ -25,6 +78,16 @@
     </div>
   </nav>
 
+  <!-- Mobile drawer -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <a href="index.html">Home</a>
+    <a href="#pilot">Join the Pilot</a>
+    <a href="#contact">Contact</a>
+    <a href="operator.html">&#x1F5FA;&#xFE0F;&nbsp; Operator Panel</a>
+    <a href="mailto:s-mauer@ucp.pt?subject=CoolRoots%20Enquiry" class="drawer-cta">Get in touch &#x2197;</a>
+  </div>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-image-wrapper" id="heroWrapper">
@@ -35,7 +98,6 @@
         id="heroImgBefore"
         onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&auto=format&fit=crop&q=80'"
       />
-      <!-- GIF plays via canvas for single-play control -->
       <canvas id="heroCanvas" class="hero-img hero-img-after" style="display:none;"></canvas>
       <img
         src=""
@@ -139,7 +201,7 @@
     </div>
   </section>
 
-  <!-- FULL-BLEED IMAGE BREAK after How It Works -->
+  <!-- FULL-BLEED IMAGE BREAK -->
   <div class="section-break-img">
     <img
       src="./Bildschirmfoto 2026-04-27 um 16.04.31.png"
@@ -219,5 +281,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Burger menu
+    var burger  = document.getElementById('burgerBtn');
+    var drawer  = document.getElementById('navDrawer');
+    var overlay = document.getElementById('navOverlay');
+    function openMenu()  { drawer.classList.add('open'); overlay.classList.add('open'); burger.classList.add('is-open'); }
+    function closeMenu() { drawer.classList.remove('open'); overlay.classList.remove('open'); burger.classList.remove('is-open'); }
+    burger.addEventListener('click', function() { drawer.classList.contains('open') ? closeMenu() : openMenu(); });
+    overlay.addEventListener('click', closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+  </script>
 </body>
 </html>
